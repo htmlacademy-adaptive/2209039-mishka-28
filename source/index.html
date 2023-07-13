@@ -2,11 +2,54 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+  <body class="page-body">
+    <header class="main-header">
+      <a class="main-header__logo logo" href="index.html">
+        <img src="#" alt="Мишка. Логотип" width="86" height="35">
+      </a>
+      <nav class="main-header__navigation main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-navigation__list main-navigation__list--user">
+          <li class="main-navigation__item main-navigation__item--user">
+            <a class="main-navigation__link main-navigation__link--user" href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-navigation__item main-navigation__item--user">
+            <a class="main-navigation__link main-navigation__link--user" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="main-navigation__list main-navigation__list--sale">
+          <li class="main-navigation__item main-navigation__item--sale">
+            <a class="main-navigation__link main-navigation__link--sale" href="#">Новые поступления</a>
+          </li>
+          <li class="main-navigation__item main-navigation__item--sale">
+            <a class="main-navigation__link main-navigation__link--sale" href="#">Распродажа</a>
+          </li>
+        </ul>
+      </nav>
+      <small class="main-header__delivery">Бесплатная доставка по России</small>
+      <h1 class="main-header__headline page-headline">Милые штуки ручной работы для дома</h1>
+      <ul class="main-header__products products-types">
+        <li class="products-types__item">
+          <a class="products-types__link" href="#"></a>
+        </li>
+        <li class="products-types__item">
+          <a class="products-types__link" href="#"></a>
+        </li>
+      </ul>
+    </header>
   </body>
 </html>
