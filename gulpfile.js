@@ -4,6 +4,8 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import { stacksvg } from "gulp-stacksvg";
+import svgo from 'gulp-svgmin';
 
 // Styles
 
@@ -16,6 +18,24 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// SVG
+
+const svg = () => {
+  return gulp.src('source/img/**/*.svg')
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img'));
+}
+
+// Stack
+
+const stack = () => {
+  return gulp.src([
+    'source/img/masks/*.svg'])
+    .pipe(stacksvg({ stack }))
+    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('source/img'));
 }
 
 // Server
@@ -41,5 +61,9 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
-);
+  styles,
+  stack,
+  gulp.series(
+    server,
+    watcher
+));

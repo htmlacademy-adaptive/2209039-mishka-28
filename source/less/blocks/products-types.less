@@ -1,0 +1,55 @@
+.products-types {
+  .list-reset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-types__item {
+  background-color: @decorate-color;
+}
+
+.products-types__item:nth-child(even) {
+  background-color: #56c3b2;
+}
+
+.products-types__link {
+  .link-reset;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-height: 103px;
+  padding: 24px 30px;
+}
+
+.products-types__link--interior::before,
+.products-types__link--toys::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #149080;
+  opacity: 0.5;
+}
+
+.products-types__link--interior::before {
+  width: 40px;
+  height: 62px;
+  right: 36px;
+  mask-image: url("../../img/stack.svg#lamp-icon");
+}
+
+.products-types__link--toys::before {
+  width: 60px;
+  height: 60px;
+  right: 27px;
+  mask-image: url("../../img/stack.svg#toy-icon");
+}
+
+.products-types__text {
+  font-weight: 700;
+  font-size: 19px;
+  max-width: 130px;
+  display: inline-block;
+  color: @background;
+}
