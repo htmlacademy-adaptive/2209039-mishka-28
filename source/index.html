@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header main-header--index">
+    <header class="main-header main-header--index main-header--index-nojs">
       <div class="main-header__container container">
-        <a class="main-header__logo logo" href="./index.html">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="./img/stack.svg#logo-desktop" width="149" height="72">
-            <source media="(min-width: 768px)" srcset="./img/stack.svg#logo-tablet" width="113" height="46">
-            <img class="main-header__logo-icon" src="./img/stack.svg#logo-mobile" alt="Логотип CAT ENERGY." width="86" height="35">
-          </picture>
-        </a>
-        <button class="main-header__toggle main-header__toggle--closed" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
         <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
-          <div class="main-navigation__wrapper">
-            <ul class="main-navigation__list">
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="./catalog.html">Каталог товаров</a>
+          <a class="main-header__logo logo" href="./index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/stack.svg#logo-desktop" width="149" height="72">
+              <source media="(min-width: 768px)" srcset="./img/stack.svg#logo-tablet" width="113" height="46">
+              <img class="main-header__logo-icon" src="./img/stack.svg#logo-mobile" alt="Логотип CAT ENERGY." width="86" height="35">
+            </picture>
+          </a>
+          <button class="main-header__toggle main-header__toggle--closed" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+            <ul class="main-header__item main-navigation__list main-navigation__list--top">
+              <li class="main-navigation__item main-navigation__item--top">
+                <a class="main-navigation__link main-navigation__link--top" href="./catalog.html">Каталог товаров</a>
               </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="#">Вязание на заказ</a>
+              <li class="main-navigation__item main-navigation__item--top">
+                <a class="main-navigation__link main-navigation__link--top" href="#">Вязание на заказ</a>
               </li>
             </ul>
-            <ul class="main-navigation__list main-navigation__list--user">
+            <ul class="main-header__item main-navigation__list main-navigation__list--user">
               <li class="main-navigation__item main-navigation__item--user">
-                <a class="main-navigation__link main-navigation__link--user main-navigation__link--search" href="#">Поиск по сайту</a>
+                <a class="main-navigation__link main-navigation__link--user main-navigation__link--search" href="#">
+                  <span class="main-navigation__text main-navigation__text--search">Поиск по сайту</span>
+                  </a>
               </li>
               <li class="main-navigation__item main-navigation__item--user">
                 <a class="main-navigation__link main-navigation__link--user main-navigation__link--basket" href="#">Корзина: пока пуста</a>
@@ -45,9 +46,8 @@
                 <a class="main-navigation__link main-navigation__link--sale" href="#">Распродажа</a>
               </li>
             </ul>
-          </div>
+            <small class="main-header__delivery">Бесплатная доставка по России</small>
         </nav>
-        <small class="main-header__delivery">Бесплатная доставка по России</small>
         <h1 class="main-header__headline page-headline">Милые штуки ручной<br>работы для дома</h1>
         <ul class="main-header__products products-types">
           <li class="products-types__item">

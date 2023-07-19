@@ -1,6 +1,8 @@
 let navMain = document.querySelector('.main-navigation');
 let navToggle = document.querySelector('.main-header__toggle');
+let headerHero = document.querySelector('.main-header--index');
 
+headerHero?.classList.remove('main-header--index-nojs');
 navMain.classList.remove('main-navigation--nojs');
 
 navToggle.addEventListener('click', function () {
