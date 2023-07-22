@@ -1,6 +1,10 @@
 .main-navigation {
   width: 100%;
 
+  @media (max-width: @max-phone) {
+    background-color: @background;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +52,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: calc(50% - 150px);
+    width: calc(50% - 122px);
     align-items: center;
   }
 }
@@ -69,7 +73,7 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    gap: 45px;
+    gap: 63px;
   }
 }
 
@@ -107,6 +111,7 @@
   padding-left: 76px;
   display: flex;
   align-items: center;
+  transition-duration: 0.3s;
 
   @media (min-width: @tablet-width) {
     min-height: 89px;
@@ -119,7 +124,7 @@
 
 .main-navigation__link--search {
   @media (min-width: @tablet-width) {
-    min-width: 79px;
+    min-width: 83px;
     border-left: 1px solid rgba(@main-text, 0.1);
     border-right: 1px solid rgba(@main-text, 0.1);
   }
@@ -133,24 +138,28 @@
   @media (min-width: @tablet-width) {
     min-width: 167px;
     font-size: 15px;
-    padding-left: 0;
-    min-height: 57px;
+    padding-left: 4px;
+    min-height: 67px;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 17px;
+    min-width: 184px;
     position: relative;
     min-height: 89px;
+    padding-left: 0;
   }
 }
 
 .main-navigation__link--basket {
-  @media (min-width: @desktop-width) {
-    padding-left: 65px;
+  @media (min-width: @tablet-width) {
+    padding-left: 86px;
   }
 }
 
 .main-navigation__link--sale {
   @media (min-width: @desktop-width) {
+    min-height: 65px;
     font-size: 15px;
   }
 }
@@ -164,6 +173,7 @@
   transform: translateY(-50%);
   background-color: @main-text;
   opacity: 0.2;
+  transition-duration: 0.3s;
 }
 
 .main-navigation__link--search::after {
@@ -196,4 +206,21 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.main-navigation__link:hover,
+.main-navigation__link:focus-visible {
+  color: rgba(@main-text, 0.6);
+  outline: none;
+}
+
+.main-navigation__link:hover::after,
+.main-navigation__link:focus-visible::after {
+  background-color: rgba(@decorate-color, 1);
+  fill-opacity: 1;
+  opacity: 1;
+}
+
+.main-navigation__link:disabled {
+  opacity: 0.3;
 }
