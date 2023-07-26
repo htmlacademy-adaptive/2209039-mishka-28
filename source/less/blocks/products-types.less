@@ -6,8 +6,13 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
+    max-width: 668px;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 1050px;
   }
 }
 
@@ -65,10 +70,9 @@
 
 .products-types__link:hover,
 .products-types__link:focus-visible {
-  outline: 2px solid #59d5bc;
-  outline-offset: 0;
   background-color: #59d5bc;
   border: none;
+  transform: scale(1, 1.04);
 }
 
 .products-types__item:nth-child(even):hover,
@@ -81,7 +85,7 @@
   opacity: 0.7;
 }
 
-.products-types__link--interior:disabled::before {
+.products-types__link--interior:active::before {
   opacity: 0.3;
 }
 

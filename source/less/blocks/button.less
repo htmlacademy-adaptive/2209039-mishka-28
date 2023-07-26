@@ -1,0 +1,34 @@
+.button {
+  .link-reset;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @text-alt;
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid @text-alt;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.button--crocheted-baskets {
+  @media (min-width: @tablet-width) {
+    max-width: 292px;
+  }
+}
+
+.button:hover,
+.button:focus-visible {
+  color: @background;
+  background-color: @text-alt;
+  outline: none;
+}
+
+.button:active {
+  color: rgba(@background, 0.3);
+}

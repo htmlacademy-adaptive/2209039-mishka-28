@@ -48,7 +48,9 @@
             </ul>
             <small class="main-header__delivery">Бесплатная доставка по России</small>
         </nav>
-        <h1 class="main-header__headline page-headline">Милые штуки ручной<br>работы для дома</h1>
+        <div class="main-header__background-container">
+          <h1 class="main-header__headline page-headline">Милые штуки ручной<br>работы для дома</h1>
+        </div>
         <ul class="main-header__products products-types">
           <li class="products-types__item">
             <a class="products-types__link products-types__link--interior" href="#">
@@ -63,6 +65,30 @@
         </ul>
       </div>
     </header>
+    <main class="main-container">
+      <section class="page-section crocheted-baskets">
+        <div class="crocheted-baskets__text-wrapper">
+          <h2 class="page-headline page-headline--baskets">Вязаные корзинки</h2>
+          <strong class="crocheted-baskets__label">ТОВАР НЕДЕЛИ</strong>
+        </div>
+        <p class="crocheted-baskets__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+        <dl class="crocheted-baskets__list basket-specs">
+          <dt class="basket-specs__item basket-specs__key">Цвет:</dt>
+          <dd class="basket-specs__item basket-specs__value">тиффани/серый</dd>
+          <dt class="basket-specs__item basket-specs__key">Диаметр:</dt>
+          <dd class="basket-specs__item basket-specs__value">25 см</dd>
+          <dt class="basket-specs__item basket-specs__key">Высота:</dt>
+          <dd class="basket-specs__item basket-specs__value">15 см</dd>
+        </dl>
+        <picture>
+          <source media="(min-width: 1050px)" srcset="./img/index/basket-desktop.jpg, ./img/index/basket-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="./img/index/basket-tablet.jpg, ./img/index/basket-tablet@2x.jpg 2x">
+          <img class="crocheted-baskets__image" src="./img/index/basket-mobile.jpg" srcset="./img/index/basket-mobile@2x.jpg 2x" alt="Наши корзинки." width="260" height="315">
+        </picture>
+        <span class="crocheted-baskets__price">Цена: 990 руб.</span>
+        <a class="crocheted-baskets__button button button--crocheted-baskets" href="#">ЗАКАЗАТЬ</a>
+      </section>
+    </main>
     <script src="./js/script.js"></script>
   </body>
 </html>

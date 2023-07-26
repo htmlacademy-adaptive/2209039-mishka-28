@@ -1,0 +1,167 @@
+.crocheted-baskets {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 30px;
+  padding-bottom: 42px;
+  background-color: @background;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    padding-top: 40px;
+    padding-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 225px;
+    padding-top: 115px;
+    padding-bottom: 96px;
+  }
+}
+
+.crocheted-baskets::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  left: 0;
+  bottom: 0;
+  background-color: @background-decorative;
+  mask-image: url("../../img/stack.svg#zigzag-basket");
+  mask-repeat: repeat-x;
+  mask-size: 320px 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 17px;
+    mask-size: 772px 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    height: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.crocheted-baskets__text-wrapper {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.crocheted-baskets__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  margin-bottom: 18px;
+  color: @decorate-color;
+
+  @media (min-width: @tablet-width) {
+    line-height: 17px;
+    text-align: center;
+    max-width: 100px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: -123px;
+  }
+}
+
+.crocheted-baskets__description {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 28px;
+  color: @text-alt;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    max-width: calc(50% - 42px);
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 292px;
+    margin-bottom: 59px;
+  }
+}
+
+.crocheted-baskets__list {
+  margin: 0;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    max-width: calc(50% - 42px);
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 292px;
+    margin-bottom: 109px;
+  }
+}
+
+.crocheted-baskets__image {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1 1.2;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: calc(50% - 42px);
+    max-width: 350px;
+    top: 140px;
+    right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 525px;
+    top: 54px;
+    z-index: -1;
+  }
+}
+
+.crocheted-baskets__price {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  color: @text-alt;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    max-width: calc(50% - 42px);
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 292px;
+  }
+}
+
+.main-header__products {
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
