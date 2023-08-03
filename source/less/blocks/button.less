@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.button--crocheted-baskets {
+.button--top-product {
   @media (min-width: @tablet-width) {
     max-width: 292px;
   }
@@ -31,4 +31,26 @@
 
 .button:active {
   color: rgba(@background, 0.3);
+}
+
+.button--secondary {
+  font-size: 17px;
+  line-height: 16px;
+  max-width: 350px;
+  color: @background;
+  background-color: @decorate-color;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  background-color: #59d5bc;
+  outline: none;
+}
+
+.button--secondary:active {
+  background-color: #59d5bc;
+  transform: scaleY(100% + 5px);
+  opacity: 1;
 }

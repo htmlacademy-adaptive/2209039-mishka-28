@@ -36,6 +36,10 @@
   background-color: @background;
 }
 
+.main-navigation--opened + .main-header__background-container {
+  margin-top: 79px;
+}
+
 .main-navigation--nojs .main-navigation__list {
   @media (max-width: @max-phone) {
     display: block;
@@ -205,7 +209,7 @@
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #ececec;
+  background-color: @pseudo-el-color;
   bottom: 0;
   left: 0;
 

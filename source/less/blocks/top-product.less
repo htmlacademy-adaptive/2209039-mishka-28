@@ -1,4 +1,4 @@
-.crocheted-baskets {
+.top-product {
   position: relative;
   margin: 0 auto;
   max-width: 1150px;
@@ -11,18 +11,18 @@
     display: flex;
     flex-direction: column;
     padding: 0 50px;
-    padding-top: 40px;
+    padding-top: 45px;
     padding-bottom: 69px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 225px;
-    padding-top: 115px;
+    padding-top: 123px;
     padding-bottom: 96px;
   }
 }
 
-.crocheted-baskets::before {
+.top-product::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -41,15 +41,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: @desktop-width;
+    max-width: 1050px;
     height: 23px;
     left: 50%;
+    mask-image: url("../../img/stack.svg#zigzag-basket-desktop");
     transform: translateX(-50%);
   }
 }
 
-.crocheted-baskets__text-wrapper {
+.top-product__text-wrapper {
   position: relative;
+  margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 38px;
@@ -59,10 +61,10 @@
   }
 }
 
-.crocheted-baskets__label {
+.top-product__label {
   font-weight: 700;
   font-size: 17px;
-  line-height: 20px;
+  line-height: 30px;
   margin-bottom: 18px;
   color: @decorate-color;
 
@@ -71,50 +73,52 @@
     text-align: center;
     max-width: 100px;
     margin: 0;
+    margin-right: 13px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    left: -123px;
+    top: 8px;
+    left: -143px;
   }
 }
 
-.crocheted-baskets__description {
+.top-product__description {
   font-size: 15px;
   line-height: 24px;
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   color: @text-alt;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 30px;
     max-width: calc(50% - 42px);
-    margin-bottom: 48px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 292px;
-    margin-bottom: 59px;
+    margin-bottom: 50px;
   }
 }
 
-.crocheted-baskets__list {
+.top-product__list {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     max-width: calc(50% - 42px);
-    margin-bottom: 57px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 292px;
-    margin-bottom: 109px;
+    margin-bottom: 115px;
   }
 }
 
-.crocheted-baskets__image {
+.top-product__image {
   display: flex;
   width: 100%;
   aspect-ratio: 1 1.2;
@@ -123,20 +127,20 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    width: calc(50% - 42px);
+    width: calc(50% - 50px);
     max-width: 350px;
-    top: 140px;
+    top: 144px;
     right: 50px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 525px;
-    top: 54px;
+    top: 63px;
     z-index: -1;
   }
 }
 
-.crocheted-baskets__price {
+.top-product__price {
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;

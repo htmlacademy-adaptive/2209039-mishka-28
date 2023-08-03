@@ -2,6 +2,7 @@
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
@@ -14,9 +15,16 @@
   }
 }
 
-.page-headline--baskets {
+.page-headline--header {
+  margin: 0 auto;
+}
+
+.page-headline--baskets,
+.page-headline--advantages,
+.page-headline--feedback,
+.page-headline--contacts,
+.page-headline--modal {
   font-size: 25px;
-  margin: 0;
 
   @media (min-width: @tablet-width) {
     margin-right: auto;
@@ -28,5 +36,23 @@
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
+  }
+}
+
+.page-headline--advantages {
+  margin-right: auto;
+}
+
+.page-headline--modal {
+  text-align: center;
+  text-transform: uppercase;
+  width: 56%;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 57px;
+    width: fit-content;
   }
 }
