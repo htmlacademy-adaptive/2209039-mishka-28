@@ -7,6 +7,14 @@
   }
 }
 
+.main-header--alt-color {
+  background: linear-gradient(to bottom, @background 0 79px, @background-decorative 79px 100%);
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(to bottom, @background 0 89px, @background-decorative 89px 100%);
+  }
+}
+
 .main-header::before {
   @media (min-width: @tablet-width) {
     content: "";
@@ -221,6 +229,11 @@
     padding-bottom: 355px;
     min-height: 560px;
   }
+}
+
+.main-header__headline--alt {
+  min-height: auto;
+  padding: 74px 0;
 }
 
 .main-navigation--opened ~ .main-header__headline {
