@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import { stacksvg } from "gulp-stacksvg";
 import svgo from 'gulp-svgmin';
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -52,6 +53,17 @@ const server = (done) => {
   done();
 }
 
+// WebP
+
+const createWebP = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh ({
+    webp: {}
+  }))
+  .pipe(gulp.dest('source/img'))
+  .pipe(gulp.dest('build/img'));
+}
+
 // Watcher
 
 const watcher = () => {
@@ -63,6 +75,7 @@ const watcher = () => {
 export default gulp.series(
   styles,
   stack,
+  createWebP,
   gulp.series(
     server,
     watcher

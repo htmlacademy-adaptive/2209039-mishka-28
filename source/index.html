@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <header class="main-header main-header--index main-header--index-nojs">
@@ -25,7 +30,7 @@
                 <a class="main-navigation__link main-navigation__link--top" href="./catalog.html">Каталог товаров</a>
               </li>
               <li class="main-navigation__item main-navigation__item--top">
-                <a class="main-navigation__link main-navigation__link--top" href="#">Вязание на заказ</a>
+                <a class="main-navigation__link main-navigation__link--top" href="./form.html">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="main-header__item main-navigation__list main-navigation__list--user">
@@ -81,8 +86,11 @@
           <dd class="basket-specs__item basket-specs__value">15 см</dd>
         </dl>
         <picture>
-          <source media="(min-width: 1050px)" srcset="./img/index/basket-desktop.jpg, ./img/index/basket-desktop@2x.jpg 2x">
+          <source type="image/webp" media="(min-width: 1050px)" srcset="./img/index/basket-desktop.webp, ./img/index/basket-desktop@2x.webp 2x">
+          <source media="(min-width: 1150px)" srcset="./img/index/basket-desktop.jpg, ./img/index/basket-desktop@2x.jpg 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/index/basket-tablet.webp, ./img/index/basket-tablet@2x.webp 2x">
           <source media="(min-width: 768px)" srcset="./img/index/basket-tablet.jpg, ./img/index/basket-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="./img/index/basket-mobile.webp, ./img/index/basket-mobile@2x.webp 2x">
           <img class="top-product__image" src="./img/index/basket-mobile.jpg" srcset="./img/index/basket-mobile@2x.jpg 2x" alt="Наши корзинки." width="260" height="315">
         </picture>
         <span class="top-product__price">Цена: 990 руб.</span>
@@ -135,8 +143,11 @@
         <div class="contacts__map-container">
           <a class="contacts__full-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="./img/index/map-desktop.webp 1x, ./img/index/map-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="./img/index/map-desktop.jpg 1x, ./img/index/map-desktop@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/index/map-tablet.webp 1x, ./img/index/map-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="./img/index/map-tablet.jpg 1x, ./img/index/map-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="./img/index/map-mobile.webp 1x, ./img/index/map-mobile@2x.webp 2x">
               <img class="contacts__map-image" src="./img/index/map-mobile.jpg" srcset="./img/index/map-mobile@2x.jpg 2x" alt="Как до нас добраться." width="320" height="454">
             </picture>
           </a>

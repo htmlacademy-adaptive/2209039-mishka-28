@@ -234,6 +234,14 @@
 .main-header__headline--alt {
   min-height: auto;
   padding: 74px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 34px 0 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 105px;
+  }
 }
 
 .main-navigation--opened ~ .main-header__headline {

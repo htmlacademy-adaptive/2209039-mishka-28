@@ -1,4 +1,17 @@
 .form-page__introduction {
   color: @text-alt;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    max-width: 666px;
+    margin: 0 auto;
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 702px;
+    padding: 0;
+  }
 }

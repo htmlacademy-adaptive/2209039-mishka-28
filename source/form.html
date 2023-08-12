@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <header class="main-header main-header--alt-color main-header--index main-header--index-nojs">
@@ -52,10 +57,10 @@
       </div>
     </header>
     <main class="main-container main-container--form form-page">
-      <span class="form-page form-page__introduction">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
+      <span class="form-page__introduction">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form__input-container container">
-          <h2 class="form__headline">ТИП</h2>
+          <h2 class="form__headline form__headline--type">ТИП</h2>
           <input class="form__input form__input--radio visually-hidden" type="radio" id="acsessory" name="type" value="acsessory" checked>
           <label class="form__label form__label--radio" for="acsessory">
             Аксессуар для интерьера
@@ -66,8 +71,8 @@
           </label>
         </div>
         <div class="form__color-wrapper">
-          <div class="form__input-container container">
-            <h2 class="form__headline">ЦВет</h2>
+          <div class="form__input-container form__input-container--checkbox container">
+            <h2 class="form__headline form__headline--color">ЦВет</h2>
             <input class="form__input form__input--checkbox visually-hidden" type="checkbox" id="white" name="color" value="white" checked>
             <label class="form__label form__label--checkbox" for="white">
               Белый
@@ -94,8 +99,8 @@
             </label>
           </div>
         </div>
-        <div class="form__input-container container">
-          <h2 class="form__headline">ФИО</h2>
+        <div class="form__input-container form__input-container--name container">
+          <h2 class="form__headline form__headline--type">ФИО</h2>
           <label class="form__label form__label--name">
             Имя:<br>
             <input class="form__input form__input--name" type="text" name="first-name" placeholder="Введите ваше имя*">
@@ -114,10 +119,12 @@
             <label class="form__label form__label--contacts form__label--phone" for="phone">
               <span class="form__label-title">тел<br></span>
               <input class="form__input form__input--contacts" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <span class="form__input-icon form__input-icon--phone"></span>
             </label>
             <label class="form__label form__label--contacts form__label--email" for="email">
               <span  class="form__label-title">E-mail<br></span>
               <input class="form__input form__input--contacts" type="email" id="email" name="email" placeholder="Ваш Email*">
+              <span class="form__input-icon form__input-icon--email"></span>
             </label>
           </div>
         </div>
