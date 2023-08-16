@@ -3,5 +3,18 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 50px 53px;
+    gap: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 120px;
+    padding-bottom: 58px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 52px;
+  }
 }
