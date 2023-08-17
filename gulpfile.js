@@ -25,7 +25,6 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -75,7 +74,6 @@ const stack = () => {
     'source/img/masks/*.svg'])
     .pipe(stacksvg({ stack }))
     .pipe(gulp.dest('build/img'))
-    .pipe(gulp.dest('source/img'));
 }
 
 // Copy
@@ -103,7 +101,7 @@ export const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -127,7 +125,7 @@ const createWebP = () => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html').on(html, browser.reload);
   gulp.watch('source/js/*.js', gulp.series(scripts));
 }
 

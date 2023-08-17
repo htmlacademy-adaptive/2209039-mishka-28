@@ -41,28 +41,9 @@
   }
 }
 
-.card__text::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 19px;
-  background-color: @main-text;
-  opacity: 0.2;
-  mask-image: url("../../img/stack.svg#basket-icon");
-  right: 27px;
-  bottom: 32px;
-  transition-duration: 0.3s;
-
-  @media (min-width: @tablet-width) {
-    right: 32px;
-  }
-
-  @media (min-width: @desktop-width) {
-    bottom: 27px;
-  }
-}
-
 .card__name {
+  .link-reset;
+  font-weight: 700;
   font-size: 17px;
   margin-bottom: 6px;
   transition-duration: 0.3s;
@@ -103,6 +84,56 @@
   }
 }
 
+.card__busket-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  right: 16px;
+  bottom: 21px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    right: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 17px;
+  }
+}
+
+.card__busket-button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  background-color: @main-text;
+  opacity: 0.2;
+  mask-image: url("../../img/stack.svg#basket-icon");
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.3s;
+}
+
+.card__busket-button:focus-visible {
+  outline: none;
+}
+
+.card__busket-button:hover::before,
+.card__busket-button:focus-visible::before {
+  background-color: @decorate-color;
+  opacity: 1;
+}
+
+.card__busket-button:active::before {
+  background-color: @decorate-color;
+  opacity: 0.3;
+}
+
 .card__price::before {
   content: "";
   position: absolute;
@@ -118,28 +149,24 @@
 }
 
 .card__link:hover .card__text,
-.card__link:focus-visible .card__text {
+.card__link:focus-within .card__text {
   box-shadow: 0 6px 10px 0 rgba(@main-text, 0.1);
+  outline: none;
+}
+
+.card__link:hover .card__image-link,
+.card__link:focus-within .card__image-link {
+  outline: none;
 }
 
 .card__link:active .card__text {
   box-shadow: 0 3px 5px 0 rgba(@main-text, 0.1);
 }
 
-.card__link:hover .card__text::before,
-.card__link:focus-visible .card__text::before {
-  background-color: @decorate-color;
-  opacity: 1;
-}
-
-.card__link:active .card__text::before {
-  background-color: @decorate-color;
-  opacity: 0.3;
-}
-
 .card__link:hover .card__name,
-.card__link:focus-visible .card__name {
+.card__link:focus-within .card__name {
   opacity: 0.6;
+  outline: none;
 }
 
 .card__link:active .card__name {
