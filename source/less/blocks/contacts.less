@@ -1,0 +1,194 @@
+.contacts {
+  margin: 0 auto;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 57px;
+    background-image: url("../../img/index/flag-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 93% 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    max-width: 1150px;
+    padding: 0;
+    background-position: 10% 133px;
+  }
+}
+
+.contacts__text-container {
+  padding: 39px 30px 62px;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px;
+    padding-top: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 150px 50% 85px 225px;
+  }
+}
+
+.contacts__list {
+  width: 100%;
+  margin: 0;
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 34px;
+  }
+}
+
+.contacts__item {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0;
+  color: @text-alt;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.contacts__type {
+  width: 29%;
+
+  @media (min-width: @tablet-width) {
+    width: calc(13% - 8px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 22%;
+  }
+}
+
+.contacts__type:nth-of-type(even) {
+  @media (min-width: @tablet-width) {
+    margin-left: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.contacts__value {
+  width: 71%;
+
+  @media (min-width: @tablet-width) {
+    width: calc(35% - 8px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 78%;
+  }
+}
+
+.contacts__email {
+  .link-reset;
+  position: relative;
+  color: @text-alt;
+  transition-duration: 0.3s;
+}
+
+.contacts__email::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  background-color: @decorate-color;
+  transition-duration: 0.3s;
+
+  @media (min-width: @desktop-width) {
+    bottom: -8px;
+  }
+}
+
+.contacts__email:hover,
+.contacts__email:focus-visible {
+  color: #46c1ae;
+  outline: none;
+}
+
+.contacts__email:hover::before,
+.contacts__email:focus-visible::before {
+  background-color: #46c1ae;
+}
+
+.contacts__email:active::before {
+  opacity: 0.1;
+}
+
+.contacts__map-container {
+  position: relative;
+  width: 100%;
+  min-height: 454px;
+  aspect-ratio: 1 / 1.4;
+
+  @media (min-width: @tablet-width) {
+    aspect-ratio: 1.7 / 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 46%;
+    top: 71px;
+    right: 50px;
+    aspect-ratio: 1.15 / 1;
+  }
+}
+
+.contacts__full-link {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  z-index: -1;
+}
+
+.contacts__map-image {
+  width: 100%;
+  aspect-ratio: 1 / 1.4;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    aspect-ratio: 1.7 / 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    aspect-ratio: 1.15 / 1;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.contacts__button-wrapper {
+  width: 100%;
+  padding: 0 30px;
+  margin-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 59px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 225px;
+    margin-bottom: 105px;
+  }
+}

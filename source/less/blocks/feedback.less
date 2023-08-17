@@ -1,0 +1,194 @@
+.feedback {
+  position: relative;
+  padding: 0 31px 51px;
+
+  @media (min-width: @tablet-width) {
+    max-width: @desktop-width;
+    padding: 83px 50px 133px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../img/index/review-bg.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 350px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/index/review-bg@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding-top: 78px;
+    padding-bottom: 189px;
+    padding-left: 225px;
+    background-position: 50px 0;
+  }
+}
+
+.feedback::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  left: 0;
+  bottom: 0;
+  background-color: @background-decorative;
+  mask-image: url("../../img/stack.svg#zigzag-basket");
+  mask-repeat: repeat-x;
+  mask-size: 320px 6px;
+
+  @media (min-width: @tablet-width) {
+    mask-image: url("../../img/stack.svg#zigzag-basket-desktop");
+    width: 100%;
+    height: 17px;
+    mask-size: 772px 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    height: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.feedback__text {
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0;
+  margin-top: 12px;
+  color: @text-alt;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    margin-top: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 814px;
+    margin-top: 35px;
+  }
+}
+
+.feedback__author {
+  margin-top: 33px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 45px;
+  }
+}
+
+.feedback__name {
+  font-weight: 700;
+  font-size: 17px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
+}
+
+.feedback__tag-name {
+  .link-reset;
+  font-size: 17px;
+  line-height: 30px;
+  color: @text-alt;
+  transition-duration: 0.3s;
+}
+
+.feedback__tag-name:hover,
+.feedback__tag-name:focus-visible {
+  opacity: 0.6;
+  outline: none;
+}
+
+.feedback__tag-name:active {
+  opacity: 0.3;
+}
+
+.feedback__swipe {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: fit-content;
+    right: 50px;
+    bottom: 133px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 188px;
+  }
+}
+
+.feedback-button {
+  position: relative;
+  width: 50%;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid @pseudo-el-color;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    width: 88px;
+  }
+}
+
+.feedback-button--next {
+  border-left: none;
+}
+
+.feedback-button::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 26px;
+  background-color: @main-text;
+  mask-image: url("../../img/stack.svg#huge-arrow");
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.3s;
+}
+
+.feedback-button--next::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.feedback-button:focus-visible {
+  outline: none;
+}
+
+.feedback-button:hover::before,
+.feedback-button:focus-visible::before {
+  opacity: 0.6;
+}
+
+.feedback-button:active::before {
+  opacity: 0.3;
+}
+
+.feedback__button {
+  margin-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    margin: 0;
+    width: 175px;
+    top: 80px;
+    right: 50px;
+  }
+}

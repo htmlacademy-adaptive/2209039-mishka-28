@@ -1,0 +1,110 @@
+.page-footer {
+  width: 100%;
+  background-color: @background-decorative;
+}
+
+.page-footer__container {
+  position: relative;
+  width: 100%;
+  max-width: @desktop-width;
+  min-height: 160px;
+  padding: 19px 30px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px;
+    padding-top: 32px;
+    padding-bottom: 58px;
+    flex-direction: row;
+  }
+}
+
+.page-footer__container::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 60px);
+  height: 1px;
+  top: 50%;
+  left: 30px;
+  background-color: #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__home-link {
+  position: relative;
+  width: 102px;
+  height: 34px;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.page-footer__home-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: @main-text;
+  mask-image: url("../../img/stack.svg#logo-footer");
+  transition-duration: 0.3s;
+}
+
+.page-footer__home-link:hover::before,
+.page-footer__home-link:focus-visible::before {
+  background-color: #46c1ae;
+}
+
+.page-footer__home-link:active::before {
+  background-color: #46c1ae;
+  opacity: 0.3;
+}
+
+.page-footer__copyright {
+  .link-reset;
+  position: relative;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  min-height: 35px;
+  padding-right: 54px;
+  display: flex;
+  align-items: center;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.page-footer__copyright::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 34px;
+  top: 0;
+  right: 0;
+  background-color: @decorate-color;
+  mask-image: url("../../img/stack.svg#htmlacademy");
+  transition-duration: 0.3s;
+}
+
+.page-footer__copyright:hover::before,
+.page-footer__copyright:focus-visible::before {
+  background-color: #46c1ae;
+}
+
+.page-footer__copyright:active::before {
+  background-color: #46c1ae;
+  opacity: 0.3;
+}

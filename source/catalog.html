@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Мишка. Каталог</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+  <body class="page-body">
+    <header class="main-header main-header--alt-color main-header--index main-header--index-nojs">
+      <div class="main-header__container container">
+        <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
+          <a class="main-header__logo logo" href="./index.html">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="./img/stack.svg#logo-desktop" width="149" height="72">
+              <source media="(min-width: 768px)" srcset="./img/stack.svg#logo-tablet" width="113" height="46">
+              <img class="main-header__logo-icon" src="./img/stack.svg#logo-mobile" alt="Логотип CAT ENERGY." width="86" height="35">
+            </picture>
+          </a>
+          <button class="main-header__toggle main-header__toggle--closed" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+            <ul class="main-header__item main-navigation__list main-navigation__list--top">
+              <li class="main-navigation__item main-navigation__item--top">
+                <a class="main-navigation__link main-navigation__link--top" href="./catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-navigation__item main-navigation__item--top">
+                <a class="main-navigation__link main-navigation__link--top" href="./form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-header__item main-navigation__list main-navigation__list--user">
+              <li class="main-navigation__item main-navigation__item--user">
+                <a class="main-navigation__link main-navigation__link--user main-navigation__link--search" href="#">
+                  <span class="main-navigation__text main-navigation__text--search">Поиск по сайту</span>
+                  </a>
+              </li>
+              <li class="main-navigation__item main-navigation__item--user">
+                <a class="main-navigation__link main-navigation__link--user main-navigation__link--basket" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__list main-navigation__list--sale">
+              <li class="main-navigation__item main-navigation__item--sale">
+                <a class="main-navigation__link main-navigation__link--sale" href="#">Новые поступления</a>
+              </li>
+              <li class="main-navigation__item main-navigation__item--sale">
+                <a class="main-navigation__link main-navigation__link--sale" href="#">Распродажа</a>
+              </li>
+            </ul>
+            <small class="main-header__delivery">Бесплатная доставка по России</small>
+        </nav>
+        <h1 class="main-header__headline main-header__headline--alt page-headline page-headline--header">Каталог товаров</h1>
+      </div>
+    </header>
+    <main class="main-container main-container--catalog catalog-page">
+      <section class="catalog-page__section catalog-page__cards">
+        <ul class="catalog-list">
+          <li class="catalog-list__item card">
+            <div class="card__link">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="./img/catalog/product-1-desktop.webp, ./img/catalog/product-1-desktop@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="./img/catalog/product-1-desktop.jpeg, ./img/catalog/product-1-desktop@2x.jpeg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/product-1-tablet.webp, ./img/catalog/product-1-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="./img/catalog/product-1-tablet.jpeg, ./img/catalog/product-1-tablet@2x.jpeg 2x">
+                  <source type="image/webp" srcset="./img/catalog/product-1-mobile.webp, ./img/catalog/product-1-mobile@2x.webp 2x">
+                  <img class="card__image" src="./img/catalog/product-1-mobile.jpg" srcset="./img/catalog/product-1-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик.">
+                </picture>
+              </a>
+              <div class="card__text">
+                <a class="card__name" href="#">Зайчик-попрыгайчик</a>
+                <span class="card__description">Рост 30 см, вес 200 г</span>
+                <span class="card__price">1 200 руб.</span>
+                <button class="card__busket-button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="catalog-list__item card">
+            <div class="card__link">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="./img/catalog/product-2-desktop.webp, ./img/catalog/product-2-desktop@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="./img/catalog/product-2-desktop.jpeg, ./img/catalog/product-2-desktop@2x.jpeg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/product-2-tablet.webp, ./img/catalog/product-2-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="./img/catalog/product-2-tablet.jpeg, ./img/catalog/product-2-tablet@2x.jpeg 2x">
+                  <source type="image/webp" srcset="./img/catalog/product-2-mobile.webp, ./img/catalog/product-2-mobile@2x.webp 2x">
+                  <img class="card__image" src="./img/catalog/product-2-mobile.jpg" srcset="./img/catalog/product-2-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаная корзинка для белья.">
+                </picture>
+              </a>
+              <div class="card__text">
+                <a class="card__name" href="#">Корзинка для белья</a>
+                <span class="card__description">Диаметр 15 см, высота 10 см</span>
+                <span class="card__price">690 руб.</span>
+                <button class="card__busket-button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="catalog-list__item card">
+            <div class="card__link">
+              <a class="card__image-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="./img/catalog/product-3-desktop.webp, ./img/catalog/product-3-desktop@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="./img/catalog/product-3-desktop.jpeg, ./img/catalog/product-3-desktop@2x.jpeg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/product-3-tablet.webp, ./img/catalog/product-3-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="./img/catalog/product-3-tablet.jpeg, ./img/catalog/product-3-tablet@2x.jpeg 2x">
+                  <source type="image/webp" srcset="./img/catalog/product-3-mobile.webp, ./img/catalog/product-3-mobile@2x.webp 2x">
+                  <img class="card__image" src="./img/catalog/product-3-mobile.jpg" srcset="./img/catalog/product-3-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаная корзинка для игрушек.">
+                </picture>
+              </a>
+              <div class="card__text">
+                <a class="card__name" href="#">Большая корзинка для игрушек</a>
+                <span class="card__description">Диаметр 30 см, высота 30 см</span>
+                <span class="card__price">1 500 руб.</span>
+                <button class="card__busket-button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog-page__section video-section">
+        <div class="video-section__container container">
+          <h2 class="video-section__headline">Процесс производства</h2>
+          <div class="video-section__file-wrapper">
+            <video class="video-section__file" width="280" height="177"></video>
+            <button class="video-section__play-button" type="button">
+              <span class="visually-hidden">Воспроизвести видео.</span>
+            </button>
+          </div>
+          <div class="video-section__text-wrapper">
+            <p class="video-section__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="video-section__button button button--video" href="#">СДелать заказ</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__container container">
+        <a class="page-footer__home-link" href="index.html">
+          <span class="visually-hidden">На главную страницу</span>
+        </a>
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Вконтакте.</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--yt" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--tg" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Telegram</span>
+            </a>
+          </li>
+        </ul>
+          <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+            Разработано
+            <span class="visually-hidden">в HTML Academy</span>
+          </a>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

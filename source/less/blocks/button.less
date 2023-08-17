@@ -1,0 +1,72 @@
+.button {
+  .link-reset;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @text-alt;
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid @text-alt;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.button--top-product {
+  @media (min-width: @tablet-width) {
+    max-width: 292px;
+  }
+}
+
+.button:hover,
+.button:focus-visible {
+  color: @background;
+  background-color: @text-alt;
+  outline: none;
+}
+
+.button:active {
+  color: rgba(@background, 0.3);
+}
+
+.button--secondary {
+  font-size: 17px;
+  line-height: 16px;
+  max-width: 350px;
+  color: @background;
+  background-color: @decorate-color;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  background-color: #59d5bc;
+  outline: none;
+}
+
+.button--secondary:active {
+  background-color: #59d5bc;
+  transform: scaleY(100% + 5px);
+  opacity: 1;
+}
+
+.button--form {
+  font-size: 17px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 230px;
+  }
+}
+
+.button--video {
+  line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
