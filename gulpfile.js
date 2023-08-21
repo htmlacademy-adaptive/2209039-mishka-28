@@ -146,7 +146,7 @@ export const build = gulp.series(
     gulp.series(
       server,
       watcher
-      ));
+));
 
 export default gulp.series(
   copy,
@@ -154,6 +154,8 @@ export default gulp.series(
   stack,
   copyImages,
   html,
+  createWebP,
+  scripts,
   gulp.series(
     server,
     watcher
