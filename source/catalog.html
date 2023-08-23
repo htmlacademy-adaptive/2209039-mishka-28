@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" href="img/favicons/favicon180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <header class="main-header main-header--alt-color main-header--index main-header--index-nojs">
@@ -53,8 +54,10 @@
             </ul>
             <small class="main-header__delivery">Бесплатная доставка по России</small>
         </nav>
-        <h1 class="main-header__headline main-header__headline--alt page-headline page-headline--header">Каталог товаров</h1>
-      </div>
+        <div class="main-header__background-container main-header__background-container--alt">
+          <h1 class="main-header__headline main-header__headline--alt page-headline page-headline--header">Каталог товаров</h1>
+        </div>
+        </div>
     </header>
     <main class="main-container main-container--catalog catalog-page">
       <section class="catalog-page__section catalog-page__cards">
@@ -171,6 +174,21 @@
           </a>
       </div>
     </footer>
+    <div class="page-body__modal">
+      <form class="modal" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="modal__headline page-headline page-headline--modal">Добавить в корзину</h2>
+        <span class="modal__text">Выберите размер:</span>
+        <div class="modal__sizes">
+          <input class="modal__size-input visually-hidden" type="radio" name="size" id="s" value="s" checked>
+          <label class="modal__size-label" for="s">S</label>
+          <input class="modal__size-input visually-hidden" type="radio" name="size" id="m" value="m">
+          <label class="modal__size-label" for="m">M</label>
+          <input class="modal__size-input visually-hidden" type="radio" name="size" id="l" value="l">
+          <label class="modal__size-label" for="l">L</label>
+        </div>
+        <button class="modal__send-button button button--secondary" type="submit">Добавить</button>
+      </form>
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>

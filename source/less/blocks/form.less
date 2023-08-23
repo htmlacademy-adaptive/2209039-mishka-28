@@ -173,6 +173,11 @@
     width: 52px;
     height: 52px;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 43%;
+    left: -1px;
+  }
 }
 
 .form__input--radio:checked + .form__label--radio::after {
@@ -212,6 +217,7 @@
 }
 
 .form__input {
+  font-family: "Open Sans", "Arial", sans-serif;
   color: @text-alt;
 }
 

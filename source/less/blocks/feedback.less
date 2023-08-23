@@ -49,6 +49,7 @@
     max-width: 1050px;
     height: 23px;
     left: 50%;
+    mask-size: 1050px px;
     transform: translateX(-50%);
   }
 }
@@ -68,6 +69,12 @@
   @media (min-width: @desktop-width) {
     max-width: 814px;
     margin-top: 35px;
+  }
+}
+
+.feedback__text br {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -133,7 +140,7 @@
   }
 }
 
-.feedback-button {
+.feedback__button {
   position: relative;
   width: 50%;
   height: 52px;
@@ -147,11 +154,11 @@
   }
 }
 
-.feedback-button--next {
+.feedback__button--next {
   border-left: none;
 }
 
-.feedback-button::before {
+.feedback__button::before {
   content: "";
   position: absolute;
   width: 50px;
@@ -164,31 +171,19 @@
   transition-duration: 0.3s;
 }
 
-.feedback-button--next::before {
+.feedback__button--next::before {
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
-.feedback-button:focus-visible {
+.feedback__button:focus-visible {
   outline: none;
 }
 
-.feedback-button:hover::before,
-.feedback-button:focus-visible::before {
+.feedback__button:hover::before,
+.feedback__button:focus-visible::before {
   opacity: 0.6;
 }
 
-.feedback-button:active::before {
+.feedback__button:active::before {
   opacity: 0.3;
-}
-
-.feedback__button {
-  margin-top: 38px;
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    margin: 0;
-    width: 175px;
-    top: 80px;
-    right: 50px;
-  }
 }

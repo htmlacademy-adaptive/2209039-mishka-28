@@ -5,22 +5,19 @@
   line-height: 24px;
   margin: 0;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.page-body__modal {
-  display: none;
+.page-body--modal {
+  overflow: hidden;
 }
 
-.page-body__modal--opened {
+.page-body__modal {
   position: fixed;
-  display: block;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(@background, 0.9);
+  display: none;
   z-index: 1;
+  background-color: rgba(@background, 0.9);
 }
