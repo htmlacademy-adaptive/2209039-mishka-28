@@ -11,7 +11,7 @@
     flex-wrap: wrap;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     max-width: 1050px;
   }
 }
@@ -66,6 +66,10 @@
   height: 60px;
   right: 27px;
   mask-image: url("../../img/stack.svg#toy-icon");
+
+  @media (min-width: @tablet-width) {
+    right: 35px;
+  }
 }
 
 .products-types__link:hover,
