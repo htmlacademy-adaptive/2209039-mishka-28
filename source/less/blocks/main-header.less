@@ -87,7 +87,7 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    width: 48%;
+    width: 20%;
     min-height: 89px;
     margin-right: auto;
     justify-content: flex-start;
@@ -95,7 +95,7 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    width: fit-content;
+    width: 13%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -103,15 +103,17 @@
 }
 
 .main-header__logo-icon {
-  width: 110px;
+  display: flex;
+  margin: 0 auto;
+  height: 43px;
 
   @media (min-width: @tablet-width) {
-    margin-left: -12px;
-    padding-top: 8px;
-    width: 147px;
+    min-height: 56px;
+    display: block;
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 75px;
     margin: 0;
   }
 }
